@@ -25,8 +25,5 @@ package object domain {
   }
 
   case class Cart(items: List[Item])
-  {
-    def getCheckoutPrice():BigDecimal = items.map(_.getPrice()).sum
-  }
 
 }

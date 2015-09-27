@@ -14,16 +14,16 @@ class CheckoutServiceSpec extends FlatSpec with CheckoutService with Matchers  {
     checkoutPrice(cart) should be (0)
   }
 
-  it should "return 1.20 for two apples" in {
+  it should "return 0.60 for two apples" in {
     val cart = Cart(List(Apple,Apple))
 
-    checkoutPrice(cart) should be (1.20)
+    checkoutPrice(cart) should be (0.60)
   }
 
-  it should "return 2.05 for 3 apples and one orange" in {
+  it should "return 1.45 for 3 apples and one orange" in {
     val cart = Cart(List(Apple, Apple, Orange, Apple))
 
-    checkoutPrice(cart) should be (2.05)
+    checkoutPrice(cart) should be (1.45)
   }
 
   it should "return 0.50 for 2 oranges" in {
@@ -32,21 +32,21 @@ class CheckoutServiceSpec extends FlatSpec with CheckoutService with Matchers  {
     checkoutPrice(cart) should be (.5)
   }
 
-  it should "return 0.75 for 3 oranges" in {
+  it should "return 0.5 for 3 oranges" in {
     val cart = Cart(List(Orange, Orange, Orange))
 
-    checkoutPrice(cart) should be (.75)
+    checkoutPrice(cart) should be (.50)
   }
 
-  it should "return 1.75 for 7 oranges" in {
+  it should "return 1.25 for 7 oranges" in {
     val cart = Cart(List(Orange, Orange, Orange, Orange, Orange, Orange, Orange))
 
-    checkoutPrice(cart) should be (1.75)
+    checkoutPrice(cart) should be (1.25)
   }
 
-  it should "return 3.05 for 5 oranges and 3 apples" in {
+  it should "return 2.20 for 5 oranges and 3 apples" in {
     val cart = Cart(List(Orange, Orange, Orange, Orange, Orange, Apple, Apple, Apple))
 
-    checkoutPrice(cart) should be (3.05)
+    checkoutPrice(cart) should be (2.20)
   }
 }
