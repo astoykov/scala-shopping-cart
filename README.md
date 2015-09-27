@@ -15,9 +15,12 @@ A sample shopping cart
 ○ 3 for the price of 2 on Oranges 
 
 
-To run the app:
+### To run the app:
 
 sbt>clean
+
 sbt>compile
+
 sbt>test (optional)
+
 sbt>run Apple,Orange,Apple
